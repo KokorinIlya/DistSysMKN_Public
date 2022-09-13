@@ -126,9 +126,9 @@ public class ProcessPhilosophersTest {
     public void onlyLockHolders() {
         var random = new Random(System.nanoTime());
         for (int i = 0; i < 1000; i++) {
-            var nProcs = random.nextInt(10, 100);
+            var nProcs = 10 + random.nextInt(100);
             initProcs(nProcs, () -> null);
-            var lockersCount = random.nextInt(1, nProcs / 2);
+            var lockersCount = 1 + random.nextInt(nProcs / 2);
             var lockers = new HashSet<Integer>();
 
             while (lockers.size() < lockersCount) {

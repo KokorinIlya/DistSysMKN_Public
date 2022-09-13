@@ -73,7 +73,7 @@ public class TestSystem {
 
     private void doRequestLock() {
         while (true) {
-            var newPid = random.nextInt(1, procs.size() + 1);
+            var newPid = 1 + random.nextInt(procs.size());
             if (!waitingPids.contains(newPid) && !Objects.equals(newPid, systemState.getLockerPid())) {
                 procs.get(newPid - 1).onLockRequest();
                 var msgs = envs.get(newPid - 1).takeIncomingMessages();
