@@ -36,7 +36,7 @@ void send_data(int conn, std::string const& data)
     return;
 }
 
-void process_client(int conn, char* buffer, int buffer_len)
+void process_client(int conn, int buffer_len)
 {
     char* buf = static_cast<char*>(malloc(buffer_len));
     std::string response = "Hello, ";
