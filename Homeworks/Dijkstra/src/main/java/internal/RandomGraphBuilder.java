@@ -14,12 +14,12 @@ public class RandomGraphBuilder {
         assert 0 <= weightsFrom && weightsFrom < weightsTo;
 
         var random = new Random(System.nanoTime());
-        var nodesCount = random.nextInt(nodesFrom, nodesTo);
+        var nodesCount = nodesFrom + random.nextInt(nodesTo - nodesFrom);
         var edgesFromTo = edgesFromToFun.apply(nodesCount);
         var edgesFrom = edgesFromTo.first();
         var edgesTo = edgesFromTo.second();
         assert 0 <= edgesFrom && edgesFrom < edgesTo;
-        var edgesCount = random.nextInt(edgesFrom, edgesTo);
+        var edgesCount = edgesFrom + random.nextInt(edgesTo - edgesFrom);
 
         var edgesAdded = 0;
         var result = new ArrayList<Map<Integer, Long>>();
@@ -32,7 +32,7 @@ public class RandomGraphBuilder {
             var destination = random.nextInt(nodesCount);
             //noinspection ConstantConditions
             assert 0 <= source && source < nodesCount && 0 <= destination && destination < nodesCount;
-            var weight = random.nextLong(weightsFrom, weightsTo);
+            var weight = weightsFrom + random.nextLong(weightsTo - weightsFrom);
             if (result.get(source).containsKey(destination)) {
                 if (skipEdges) {
                     edgesAdded++;
