@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package _5_packing;
+
+option go_package = "internal/_5_packing";
+
+message PackedIntHolder {
+  repeated uint32 ids = 1 [packed = true];
+}
+
+message UnpackedIntHolder {
+  repeated uint32 ids = 1 [packed = false];
+}

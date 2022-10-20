@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package _7_oneof;
+
+option go_package = "internal/_7_oneof";
+
+message Response {
+  uint64 request_id = 1;
+  oneof response_body {
+    string successful_response = 2;
+    uint32 error_code = 3;
+  }
+}

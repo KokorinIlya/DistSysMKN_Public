@@ -1,0 +1,79 @@
+<Library>
+    <Address>
+        Babylon
+    </Address>
+    <Books>
+        <Book>
+            <Title>
+                In Stahlgewittern
+            </Title>
+            <Language>
+                German
+            </Language>
+            <Author>
+                <Name>
+                    Ernst Jünger
+                </Name>
+                <BitrhDate>
+                    <Year>
+                        1895
+                    </Year>
+                    <Month>
+                        March
+                    </Month>
+                    <Day>
+                        29
+                    </Day>
+                </BitrhDate>
+            </Author>
+        </Book>
+        <Book>
+            <Title>
+                Опавшие листья
+            </Title>
+            <Language>
+                Russian
+            </Language>
+            <Author>
+                <Name>
+                    Василий Розанов
+                </Name>
+                <BitrhDate>
+                    <Year>
+                        1856
+                    </Year>
+                    <Month>
+                        May
+                    </Month>
+                    <Day>
+                        2
+                    </Day>
+                </BitrhDate>
+            </Author>
+        </Book>
+        <Book>
+            <Title>
+                Rigodon
+            </Title>
+            <Language>
+                French
+            </Language>
+            <Author>
+                <Name>
+                    Louis-Ferdinand Céline
+                </Name>
+                <BitrhDate>
+                    <Year>
+                        1894
+                    </Year>
+                    <Month>
+                        May
+                    </Month>
+                    <Day>
+                        27
+                    </Day>
+                </BitrhDate>
+            </Author>
+        </Book>
+    </Books>
+</Library>

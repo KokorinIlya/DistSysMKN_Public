@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package _1_simple;
+
+option go_package = "internal/_1_simple";
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+}

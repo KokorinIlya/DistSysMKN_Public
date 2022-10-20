@@ -1,0 +1,23 @@
+{
+  "address": "Babylon",
+  "books": [
+    {
+      "title": "In Stahlgewittern", "language": "German",
+      "author": {
+        "name": "Ernst Jünger", "birth_date": {"year": 1895, "month": "March", "day": 29}
+      }
+    },
+    {
+      "title": "Опавшие листья", "language": "Russian",
+      "author": {
+        "name": "Василий Розанов", "birth_date": {"year": 1856, "month": "May", "day": 2}
+      }
+    },
+    {
+      "title": "Rigodon", "language": "French",
+      "author": {
+        "name": "Louis-Ferdinand Céline", "birth_date": {"year": 1894, "month": "May", "day": 27}
+      }
+    }
+  ]
+}
