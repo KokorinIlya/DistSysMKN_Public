@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.apache.zookeeper:zookeeper:3.7.1'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task runConnect(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'Connect'
+    enableAssertions = true
+}
+
+task runLeaderElection(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'LeaderElection'
+    enableAssertions = true
+}
+
+task runConfigAsync(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'ConfigAsync'
+    enableAssertions = true
+}
