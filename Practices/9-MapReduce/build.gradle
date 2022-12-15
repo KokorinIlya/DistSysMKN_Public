@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.apache.hadoop:hadoop-client:3.3.3'
+    implementation 'org.apache.hadoop:hadoop-common:3.3.3'
+    implementation 'org.apache.hadoop:hadoop-hdfs:3.3.3'
+    implementation 'org.apache.hadoop:hadoop-mapreduce-client-app:3.3.3'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+            "Class-Path": sourceSets.main.runtimeClasspath
+        )
+    }
+}
