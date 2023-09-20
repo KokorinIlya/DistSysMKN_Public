@@ -1,0 +1,8 @@
+*.out
+.vscode
+*.pb.go
+.idea
+*.bin
+.gradle
+build
+bin
