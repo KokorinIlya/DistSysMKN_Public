@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package _3_missing;
+
+option go_package = "internal/_3_missing";
+
+message Address {
+  string country = 1;
+  string city = 2;
+}
+
+enum Role {
+  UNDEFINED = 0;
+  USER = 1;
+  ADMIN = 2;
+}
+
+message Person {
+  string name = 1;
+  uint32 age = 2;
+  repeated string phones = 3;
+  Address address = 4;
+  Role role = 5;
+}

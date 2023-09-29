@@ -1,0 +1,19 @@
+<Library Address = "Babylon">
+    <Books>
+        <Book Title = "In Stahlgewittern" Language = "German">
+            <Author Name = "Ernst Jünger">
+                <BitrhDate Year = "1895" Month = "March" Day = "29"/>
+            </Author>
+        </Book>
+        <Book Title = "Опавшие листья" Language = "Russian">
+            <Author Name = "Василий Розанов">
+                <BitrhDate Year = "1856" Month = "May" Day = "2"/>
+            </Author>
+        </Book>
+        <Book Title = "Rigodon" Language = "French">
+            <Author Name = "Louis-Ferdinand Céline">
+                <BitrhDate Year = "1894" Month = "May" Day = "27"/>
+            </Author>
+        </Book>
+    </Books>
+</Library>

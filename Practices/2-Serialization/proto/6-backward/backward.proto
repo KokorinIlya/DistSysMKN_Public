@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package _6_backward;
+
+option go_package = "internal/_6_backward";
+
+message InnerStruct {
+  string a = 1;
+  string b = 2;
+  string c = 3;
+}
+
+message MyStruct {
+  repeated InnerStruct inner = 1;
+}

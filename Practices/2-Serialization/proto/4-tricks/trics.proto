@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package _4_tricks;
+
+option go_package = "internal/_4_tricks";
+
+message A {
+  string value = 1;
+}
+
+message B {
+  A a = 1;
+}
+
+message C {
+  B b = 1;
+}
+
+message D {
+  C c = 1;
+}
+
+message DataHolder {
+  string value = 2;
+  bool value_set = 3;
+
+  uint32 id = 4;
+  bool id_set = 5;
+}
+
+message StringHolder {
+  string value = 1;
+}
+
+message UIntHolder {
+  uint32 value = 1;
+}
+
+message StructHolder {
+  StringHolder valueHolder = 1;
+  UIntHolder idHolder = 2;
+}
