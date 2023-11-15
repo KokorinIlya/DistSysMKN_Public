@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package _1_hello;
+
+option go_package = "internal/_1_hello";
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string greeting = 1;
+}

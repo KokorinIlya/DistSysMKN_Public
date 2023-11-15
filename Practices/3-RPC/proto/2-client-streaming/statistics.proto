@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package _2_client_streaming;
+
+option go_package = "internal/_2_client_streaming";
+
+service Calculator {
+  rpc CalculateStatistics(stream Line) returns (CalculateStatisticsResponse);
+}
+
+message Line {
+  string line = 1;
+}
+
+message CalculateStatisticsResponse {
+  map<string, uint64> word_counts = 1;
+}

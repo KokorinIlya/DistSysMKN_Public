@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package _3_server_streaming;
+
+option go_package = "internal/_3_server_streaming";
+
+service EventsHolder {
+  rpc GetEvents(GetEventsRequest) returns (GetEventsResponse);
+  rpc StreamEvents(StreamEventsRequest) returns (stream StreamEventsResponse);
+}
+
+message GetEventsRequest {
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
+message GetEventsResponse {
+  repeated string events = 1;
+}
+
+message StreamEventsRequest {
+  uint64 offset = 1;
+  uint64 limit = 2;
+}
+
+message StreamEventsResponse {
+  string event = 1;
+}

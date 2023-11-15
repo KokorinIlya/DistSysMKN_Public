@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package _4_chat;
+
+option go_package = "internal/_4_chat";
+
+service Chat {
+  rpc StartChat(stream Message) returns (stream Message);
+}
+
+message Message {
+  string text = 1;
+}
